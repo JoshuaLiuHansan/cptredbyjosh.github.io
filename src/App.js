@@ -33,7 +33,7 @@ class App extends Component {
     return(
       <div className="App">
           <NavigationBar navList={routes} onChoose={(path) => handleNavClick(path)} />
-          <Footer show={ hasFooterRoutes.includes(this.state.currentRoute) || window.location.pathname.includes("news-room") } />
+          <Footer show={ hasFooterRoutes.includes(this.state.currentRoute) } />
       </div>
     );
   }

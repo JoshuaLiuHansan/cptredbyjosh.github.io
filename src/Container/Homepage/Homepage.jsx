@@ -1,24 +1,17 @@
 import React, {Component} from 'react';
-import Header from '../../Component/Header/Header';
 import Body from './Body/Body';
 import './Homepage.scss';
 
 class Homepage extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            bigScreen: window.innerWidth > 960
-        }
+        this.state = {}
     }
 
     componentDidMount() {
-        let state = this;
+        // let state = this;
         
-        window.addEventListener('resize', function(event){
-            state.bigScreen = this.innerWidth > 960;
-
-            state.setState(state);
-        });
+        window.addEventListener('resize', function(event){});
     }
     
     componentWillUnmount() {
@@ -28,7 +21,6 @@ class Homepage extends Component {
     render() {
         return (
             <div className="homepage">
-                <Header bigScreen={this.state.bigScreen}/>
                 <Body />
             </div>
         );

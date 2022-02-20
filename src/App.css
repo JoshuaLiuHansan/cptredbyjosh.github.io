@@ -11,48 +11,8 @@
   /* min-height: 900px; */
 }
 
-h1, h2, h3, h4, h5 {
-  font-weight: 700;
-}
-
-.btn {
-  font-weight: 800;
-  text-decoration: none;
-  font-size:18px;
-  padding: 15px 25px;
-  min-width: 200px;
-  border: none;
-  border-radius: 10px;
-}
-
-.rednavi-bg-dark {
+.base-bg-dark {
   background-color: var(--base-bg-dark);
-}
-
-.rednavi-btn-primary {
-  background: linear-gradient(270deg, var(--button-primary));
-  box-shadow: 0px 11px 20px var(--button-primary-shadow);
-}
-
-.rednavi-btn-primary:hover {
-  box-shadow: 0px 11px 20px 0px #31FF8747;
-}
-
-.rednavi-btn-secondary {
-  background: linear-gradient(270deg, var(--button-secondary));
-  box-shadow: 0px 7px 25px var(--button-secondary-shadow);
-}
-
-.rednavi-btn-secondary:hover,
-.rednavi-btn-secondary:focus,
-.rednavi-btn-secondary:active {
-    background: linear-gradient(270deg, var(--button-secondary));
-    box-shadow: 0px 5px 15px var(--button-secondary-shadow);
-}
-
-.jumbotron {
-  padding: 20px 5%;
-  border-radius: 0;
 }
 
 /* Fonts */

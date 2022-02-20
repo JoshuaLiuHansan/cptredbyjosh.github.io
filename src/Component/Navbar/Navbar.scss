@@ -2,25 +2,22 @@
     .navbar {
         transition: 0.6s;
         font-weight: 700;
-    }
 
-    .bg-custom-light {
-        background-color: #FFF;
-        box-shadow: 0px 2px 30px var(--navbar-shadow);
-    }
-    
-    .navbar {
+        &.bg-custom {
+            background-color: var(--base-primary-color);
+            // box-shadow: 0px 2px 30px var(--navbar-shadow);
+        }
+
         .custom-rounded-bottom {
             border-radius: 0 0 1rem 1rem;
         }
 
-        &:not(.bg-custom-light) {
+        &:not(.bg-custom) {
             padding-top: 0;
 
             .navbar-brand {
                 padding: 10px;
             }
         }
-    } 
-    
+    }
 }

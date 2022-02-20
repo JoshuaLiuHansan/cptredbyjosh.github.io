@@ -4,6 +4,8 @@ import './Navbar.scss';
 import {BrowserRouter as Router, Switch, Route, Link, NavLink} from "react-router-dom";
 
 const RouteWithSubRoutes = (route) => {
+    if( !(route.hasOwnProperty('component') && route.component) ) return '';
+
     return (
         <Route
             { ...route.hasOwnProperty('exact') && route.exact ? 'exact' : '' }
@@ -45,13 +47,11 @@ class NavigationBar extends Component {
     }
 
     render() {
-        let state = this.state;
-
         return (
             <Router>
-                <Navbar expand="lg" variant="dark" className='rednavi-bg-dark'>
-                    <Link to="/" className="navbar-brand" onClick={() => this.getCurrentPath("/")}>
-                        <img src={state.brand.logo} alt="Rednavi" width={state.brand.size} />
+                <Navbar expand="lg" variant="dark" className='bg-custom'>
+                    <Link to="#cptredbyjosh" className="navbar-brand" onClick={() => this.getCurrentPath("#cptredbyjosh")}>
+                        @cptredbyjosh
                     </Link>
                     
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />

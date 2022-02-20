@@ -1,8 +1,4 @@
 :root {
-    /* Header*/
-    --header-background-image: url('/assets/banner/Homepage header.png');
-    --header-image: url('/assets/banner/Model.png');
-
     /* Color Palette */
     --base-primary-color: #7F8381;
     --base-secondary-color: #282440;

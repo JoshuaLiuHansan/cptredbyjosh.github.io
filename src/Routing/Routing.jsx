@@ -1,50 +1,44 @@
 import Homepage from '../Container/Homepage/Homepage';
-import Privacy from '../Container/Privacy/Privacy';
-import Terms from '../Container/Terms/Terms';
 
 import ErrorPage from '../Container/ErrorPage/ErrorPage';
+import { faTemperatureLow } from '@fortawesome/free-solid-svg-icons';
 
 const Routes = () => {
     return [
         {
-            path: "/privacy-and-policy",
-            name: "Privacy And Policy",
+            path: "#profile",
+            name: "Profile",
+            exact: true,
+            visibility: true,
+            showFooter: true
+        },
+        {
+            path: "#background",
+            name: "Background",
+            exact: true,
+            visibility: true,
+            showFooter: true,
+        },
+        {
+            path: "#cptredbyjosh",
+            name: "@cptredbyjosh",
             exact: true,
             visibility: false,
-            showFooter: false,
-            component: Privacy
+            showFooter: true
         },
         {
-            path: "/terms-and-condition",
-            name: "Terms & Condition",
-            exact: true,
-            visibility: false,
-            showFooter: false,
-            component: Terms
-        },
-        {
-            path: "/air-jordan",
-            name: "Air Jordan",
+            path: "#projects",
+            name: "Projects",
             exact: true,
             visibility: true,
-            showFooter: true,
-            component: Homepage
+            showFooter: faTemperatureLow
         },
         {
-            path: "/yeezy",
-            name: "Yeezy",
+            path: "#contact",
+            name: "Contact",
             exact: true,
             visibility: true,
-            showFooter: true,
-            component: Homepage
-        },
-        {
-            path: "/apparels",
-            name: "Apparels",
-            exact: true,
-            visibility: true,
-            showFooter: true,
-            component: Homepage
+            showFooter: true
         },
         
         {

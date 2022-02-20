@@ -1,40 +1,35 @@
-import React from 'react';
-import {Jumbotron, Row, Col, Button} from 'react-bootstrap';
+import React, {Component} from 'react';
+import Init from '../../Init/Init';
+import {Image} from 'react-bootstrap';
+
 import './Header.scss';
 
-const Header = (props) => {
-    let HeaderImage = "",
-        HeaderWidth = 12;
-
-    if(props.hasOwnProperty('bigScreen') && props.bigScreen) {
-        HeaderImage = (
-            <div className="header-image col-sm-4">
-                <img className="" src="/assets/banner/Model.png" alt="" />
-            </div>
-        );
-        
-        HeaderWidth = 7;
+class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            headerImgPath: "/assets/profpics/profile-picture.jpeg"
+        }
     }
 
-    return (
-        <Jumbotron className="homepage-header">
-            <Row>
-                <Col sm={HeaderWidth}>
-                    <h1 className="mb-4">
-                    We Empower Indonesian Groceries Merchants
+    render() {
+        let state = this.state;
+        let FontAwesomeIcon = Init.FontAwesomeIcon;
+
+        return (
+            <div id="profile" className="header">
+                <div className="header-background">
+                    <h1 className="header-title">
+                        Joshua Liu Hansan
                     </h1>
-                    <p className="">
-                    MyPangan adalah sebuah perusahaan <strong>groceries marketplace</strong> dengan visi
-                    kami sendiri menyejahterakan seluruh pelaku usaha pangan.
-                    </p>
-                    <Button variant="danger" className="rednavi-btn-secondary">
-                        Download Aplikasi
-                    </Button>
-                </Col>
-                { HeaderImage }
-            </Row>
-        </Jumbotron>
-    );
+                    <div className="header-image absolute">
+                        <Image src={state.headerImgPath} fluid />
+                    </div>
+                    <FontAwesomeIcon icon={['fas', 'camera']} className="header-icon" />
+                </div>
+            </div>
+        );
+    }
 }
 
 export default Header;

@@ -1,13 +1,19 @@
 import React, {Component, Fragment} from 'react';
-import Target from '../../../Component/Target/Target';
-import Varieties from '../../../Component/Varieties/Varieties';
+import Header from "../../../Component/Header/Header";
+import Profile from "../../../Component/Profile/Profile";
+
+import ComingSoon from '../../../Component/ComingSoon/ComingSoon';
 
 class Body extends Component {
     render() {
         return (
             <Fragment>
-                <Target />
-                <Varieties />
+                <Header/>
+                <Profile/>
+                {/* <ComingSoon title="Profile"></ComingSoon> */}
+                <ComingSoon title="Background"></ComingSoon>
+                <ComingSoon title="@cptredbyjosh"></ComingSoon>
+                <ComingSoon title="Projects"></ComingSoon>
             </Fragment>
         );
     }

@@ -1,41 +1,52 @@
-.homepage-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-image: var(--header-background-image);
-    background-position: left top;
-    position: relative;
-    color: var(--secondary-text-color);
-    min-height: 650px;
-    width: 100%;
+$primaryColor: var(--base-primary-color);
+$secondaryColor: var(--base-secondary-color);
 
-    h1 {
-        font-size: 7vh;
-        line-height: 9vh;
-        font-weight: 900;
+.header {
+    padding: 2rem 4em;
+    margin-bottom: 20vh;
     
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-        margin: 16px 0px;
-    }
-    
-    p {
-        font-size: 3vh;
-        line-height: 5vh;
-        color: inherit;
-        font-weight: 600;
-    }
-    
-    .header-image {
-        position: absolute;
-        bottom: 0;
-        right: 120px;
-        
-        img {
-            /* position: absolute;
-            bottom: 0; */
-            width: 500px;
+    & > &-background {
+        position: relative;
+        width: 68vw;
+        min-height: 90vh;
+        background-color: $primaryColor;
+        padding: 6vh 0 5vw 4vw;
+
+        & .header-title {
+            width: 40%;
+            font-size: 6rem;
+            font-weight: bolder;
+            color: $secondaryColor;
+        }
+
+        & .header-image {
+            width: 30vw;
+            min-width: 500px;
+
+            &.absolute {
+                position: absolute;
+                right: -80px;
+                bottom: 28%;
+            }
+
+            &::after {
+                content: "MARKETING COMMUNICATION";
+                color: $secondaryColor;
+                font-size: 1.5rem;
+                position: absolute;
+                right: -150px;
+                font-weight: bold;
+                width: 150px;
+            }
+        }
+
+        & .header-icon {
+            font-size: 150px;
+            
+            position: absolute;
+            left: 1vw;
+            bottom: -8px;
         }
     }
+
 }
