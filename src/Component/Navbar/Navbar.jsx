@@ -32,11 +32,24 @@ class NavigationBar extends Component {
     }
 
     componentDidMount() {
-        // let state = this;
+        
     }
 
     getCurrentPath = (path) => {
         let state = this.state;
+        let distance = null;
+
+        if(path !== "") {
+            console.log(document.getElementById(path.replace("#", "")).offsetTop);
+            distance = document.getElementById(path.replace("#", "")).offsetTop;
+        }
+
+        if(distance != null) {
+            window.scroll({
+                top: distance,
+                behavior: 'smooth'
+            });
+        }
 
         this.setState(state);
         this.props.onChoose(path);

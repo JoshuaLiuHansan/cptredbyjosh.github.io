@@ -29,7 +29,7 @@ class Profile extends Component {
         let rightContent = state.right;
 
         return (
-            <Row className="profile">
+            <Row id="profile" className="profile">
                 <Col sm={3} className="profile-left-side">
                     <h2> { leftContent.title } </h2>
                     <h2> { leftContent.name } </h2>

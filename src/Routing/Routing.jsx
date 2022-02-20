@@ -31,7 +31,7 @@ const Routes = () => {
             name: "Projects",
             exact: true,
             visibility: true,
-            showFooter: faTemperatureLow
+            showFooter: true
         },
         {
             path: "#contact",

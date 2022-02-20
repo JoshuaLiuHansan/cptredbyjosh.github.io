@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Init from '../../Init/Init';
+// import Init from '../../Init/Init';
 import './Footer.scss';
 
 import ComingSoon from '../ComingSoon/ComingSoon';

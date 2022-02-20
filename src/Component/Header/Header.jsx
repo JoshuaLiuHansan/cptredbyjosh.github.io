@@ -17,7 +17,7 @@ class Header extends Component {
         let FontAwesomeIcon = Init.FontAwesomeIcon;
 
         return (
-            <div id="profile" className="header">
+            <div id="header" className="header">
                 <div className="header-background">
                     <h1 className="header-title">
                         Joshua Liu Hansan

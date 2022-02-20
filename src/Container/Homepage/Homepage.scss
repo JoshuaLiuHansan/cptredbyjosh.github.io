@@ -1,15 +1,3 @@
-.navbar.transparent {
-    &:not(.bg-custom-light) {
-        .nav-link {
-            color: var(--secondary-text-color);
-            
-            &:hover {
-                color: var(--transparent-text-color);
-            }
-        }
-    }
-}
-
 .homepage {
     .homepage-header {
         margin-bottom: 3.5rem;
