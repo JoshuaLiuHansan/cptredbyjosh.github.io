@@ -1,0 +1,21 @@
+.target-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 30px;
+    overflow-x: auto;
+
+    .target-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+
+        &-desc {
+            width: 80%;
+        }
+    }
+}

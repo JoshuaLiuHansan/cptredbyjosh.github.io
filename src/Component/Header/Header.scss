@@ -1,0 +1,41 @@
+.homepage-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: var(--header-background-image);
+    background-position: left top;
+    position: relative;
+    color: var(--secondary-text-color);
+    min-height: 650px;
+    width: 100%;
+
+    h1 {
+        font-size: 7vh;
+        line-height: 9vh;
+        font-weight: 900;
+    
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 16px 0px;
+    }
+    
+    p {
+        font-size: 3vh;
+        line-height: 5vh;
+        color: inherit;
+        font-weight: 600;
+    }
+    
+    .header-image {
+        position: absolute;
+        bottom: 0;
+        right: 120px;
+        
+        img {
+            /* position: absolute;
+            bottom: 0; */
+            width: 500px;
+        }
+    }
+}

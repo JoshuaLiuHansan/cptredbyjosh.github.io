@@ -1,38 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* color: var(--primary-text-color); */
+}
+
 .App {
-  text-align: center;
+  font-family: 'Mulish';
+  color: var(--primary-text-color);
+  /* min-height: 900px; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn {
+  font-weight: 800;
+  text-decoration: none;
+  font-size:18px;
+  padding: 15px 25px;
+  min-width: 200px;
+  border: none;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.rednavi-bg-dark {
+  background-color: var(--base-bg-dark);
 }
 
-.App-link {
-  color: #61dafb;
+.rednavi-btn-primary {
+  background: linear-gradient(270deg, var(--button-primary));
+  box-shadow: 0px 11px 20px var(--button-primary-shadow);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rednavi-btn-primary:hover {
+  box-shadow: 0px 11px 20px 0px #31FF8747;
+}
+
+.rednavi-btn-secondary {
+  background: linear-gradient(270deg, var(--button-secondary));
+  box-shadow: 0px 7px 25px var(--button-secondary-shadow);
+}
+
+.rednavi-btn-secondary:hover,
+.rednavi-btn-secondary:focus,
+.rednavi-btn-secondary:active {
+    background: linear-gradient(270deg, var(--button-secondary));
+    box-shadow: 0px 5px 15px var(--button-secondary-shadow);
+}
+
+.jumbotron {
+  padding: 20px 5%;
+  border-radius: 0;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/Mulish-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/Mulish-Italic-VariableFont_wght.ttf');
+  font-style: italic;
+}
+
+/* Static 'Mulish' Font */
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-ExtraLight.ttf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-ExtraLightItalic.ttf');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-LightItalic.ttf');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-Italic.ttf');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-MediumItalic.ttf');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-SemiBoldItalic.ttf');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-BoldItalic.ttf');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-ExtraBold.ttf');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-ExtraBoldItalic.ttf');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-Black.ttf');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Fonts/mulish/static/Mulish-BlackItalic.ttf');
+  font-weight: 900;
+  font-style: italic;
 }

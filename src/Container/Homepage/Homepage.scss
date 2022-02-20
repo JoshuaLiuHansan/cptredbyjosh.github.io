@@ -1,0 +1,44 @@
+.navbar.transparent {
+    &:not(.bg-custom-light) {
+        .nav-link {
+            color: var(--secondary-text-color);
+            
+            &:hover {
+                color: var(--transparent-text-color);
+            }
+        }
+    }
+}
+
+.homepage {
+    .homepage-header {
+        margin-bottom: 3.5rem;
+    }
+
+    .jumbotron {
+        h3 {
+            font-size: 35px;
+
+            &.title {
+                width: 80%;
+
+                @media (max-width: 992px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        p {
+            &.desc {
+                font-size: 17px;
+                line-height: 30px;
+                color: var(--gray-text-color);
+                width: 80%;
+
+                @media (max-width: 992px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

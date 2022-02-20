@@ -1,0 +1,113 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: var(--footer-background-color);
+
+    #first-column {
+        width: 50%;
+
+        p {
+            width: 70%;
+            font-weight: 700;
+        }
+    }
+    #second-column {width: 50%}
+    
+    h5 {
+        // font-weight: 700;
+        font-size: 1rem;
+    }
+
+    .footer-grid {
+        width: 100%;
+        display: grid;
+        grid-template-areas: "action contact"
+                             "action address";
+        grid-column-gap: 60px;
+
+        .footer-grid-item {
+            &#action {
+                grid-area: action;
+            }
+
+            &#contact {
+                grid-area: contact;
+
+                .contact-info {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+            }
+
+            &#address {
+                grid-area: address;
+
+                .address-info {
+                    font-weight: 400;
+                    color: var(--footer-list-color);
+                }
+            }
+
+            ul {
+                li {
+                    list-style: none;
+                    font-weight: 400;
+                    color: var(--footer-list-color);
+    
+                    a {
+                        text-decoration: none;
+                        color: var(--footer-list-color);
+    
+                        &:hover {
+                            color: var(--footer-list-color);
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .flex-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        p {
+            line-height: 30px;
+        }
+
+        .footer-icon-list {
+            display: flex;
+            padding-top: 0.75rem;
+
+            .footer-icon {
+                font-size: 2.3rem;
+                margin-right: 30px;
+                color: var(--primary-text-color);
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+
+        #first-column {
+            width: 100%;
+
+            p {
+                width: 100%;
+            }
+        }
+
+        #second-column {width: 100%}
+
+        .footer-grid {
+            grid-template-areas: "action action"
+                                 "contact contact"
+                                 "address address";
+        }
+    }
+}
