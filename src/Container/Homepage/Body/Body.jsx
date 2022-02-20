@@ -11,7 +11,7 @@ class Body extends Component {
                 <Header/>
                 <Profile/>
                 {/* <ComingSoon title="Profile"></ComingSoon> */}
-                <ComingSoon title="Background"></ComingSoon>
+                <ComingSoon title="Background - Coming Soon"></ComingSoon>
                 <ComingSoon title="@cptredbyjosh"></ComingSoon>
                 <ComingSoon title="Projects"></ComingSoon>
             </Fragment>
