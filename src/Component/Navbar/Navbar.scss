@@ -1,17 +1,24 @@
+$primaryColor: var(--base-primary-color);
+$secondaryColor: var(--base-secondary-color);
+$primaryTextColor: var(--primary-text-color);
+$secondaryTextColor: var(--secondary-text-color);
+$transparentTextColor: var(--transparent-text-color);
+
 .App {
     .navbar {
         transition: 0.6s;
         font-weight: 700;
+        z-index: 3;
 
         &.bg-custom {
-            background-color: var(--base-primary-color);
+            background-color: $secondaryColor;
             // box-shadow: 0px 2px 30px var(--navbar-shadow);
 
             .nav-link {
-                color: var(--secondary-text-color);
+                color: $secondaryTextColor;
                 
                 &:hover {
-                    color: var(--transparent-text-color);
+                    color: $transparentTextColor;
                 }
             }
         }

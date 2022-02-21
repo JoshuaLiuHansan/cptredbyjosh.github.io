@@ -9,7 +9,7 @@ class ComingSoon extends Component {
 
     render() {
         return (
-            <div id="background" className="coming-soon">
+            <div className="coming-soon">
                 <h1>
                     { this.props.title }
                 </h1>

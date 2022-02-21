@@ -57,7 +57,8 @@ Init.config = {
             0.85, 0, 0, 0, 0,
             0, 0, 0, 1, 0,
         ]
-    }
+    },
+    imageFolder: "/assets/images/"
 }
 
 // Functions

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Row, Col, Image} from 'react-bootstrap';
+import Init from "../../Init/Init";
+import {Col, Image} from 'react-bootstrap';
 import './Profile.scss';
 
 class Profile extends Component {
@@ -13,23 +14,23 @@ class Profile extends Component {
             },
             right: {
                 profileImgPath: [
-                    "project-photo1.jpeg",
+                    "photo11.jpeg",
                     "photo1.jpeg"
                 ]
-            },
-            config: {
-                imageFolder: "/assets/images/"
             }
-        }
+        };
+
+        this.config = Init.config;
     }
 
     render() {
         let state = this.state;
+        let config = this.config;
         let leftContent = state.left;
         let rightContent = state.right;
 
         return (
-            <Row id="profile" className="profile">
+            <div id="profile" className="profile">
                 <Col sm={3} className="profile-left-side">
                     <h2> { leftContent.title } </h2>
                     <h2> { leftContent.name } </h2>
@@ -38,10 +39,10 @@ class Profile extends Component {
                 <Col sm={9} className="profile-right-side">
                     <div className="profile-description">
                         <div id="first">
-                            <Image src={state.config.imageFolder + rightContent.profileImgPath[0]} />
+                            <Image src={config.imageFolder + rightContent.profileImgPath[0]} />
                         </div>
                         <div id="second">
-                            <Image src={state.config.imageFolder + rightContent.profileImgPath[1]} />
+                            <Image src={config.imageFolder + rightContent.profileImgPath[1]} />
                         </div>
                         <div id="third" className="profile-text">
                             I'm a fresh graduate of Bachelor of Marketing
@@ -53,7 +54,7 @@ class Profile extends Component {
                         </div>
                     </div>
                 </Col>
-            </Row>
+            </div>
         );
     }
 }

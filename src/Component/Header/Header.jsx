@@ -18,6 +18,9 @@ class Header extends Component {
 
         return (
             <div id="header" className="header">
+                <div className="header-cover">
+                    
+                </div>
                 <div className="header-background">
                     <h1 className="header-title">
                         Joshua Liu Hansan

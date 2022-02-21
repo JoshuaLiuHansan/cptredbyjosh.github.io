@@ -1,20 +1,40 @@
 $primaryColor: var(--base-primary-color);
 $secondaryColor: var(--base-secondary-color);
+$primaryTextColor: var(--primary-text-color);
+$secondaryTextColor: var(--secondary-text-color);
+$backgroundImage: var(--background-image-2);
 
 .header {
+    // max-height: 1143px;
+    position: relative;
     padding: 2rem 4em;
     margin-bottom: 20vh;
+    background-image: $backgroundImage;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+
+    .header-cover {
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
     
     & > &-background {
         position: relative;
-        width: 68vw;
-        min-height: 90vh;
+        width: 83vw;
+        height: 90vh;
         background-color: $primaryColor;
         padding: 6vh 0 5vw 4vw;
+        z-index: 2;
 
         & .header-title {
             width: 40%;
-            font-size: 6rem;
+            font-size: 6vw;
             font-weight: bolder;
             color: $secondaryColor;
         }
@@ -25,18 +45,18 @@ $secondaryColor: var(--base-secondary-color);
 
             &.absolute {
                 position: absolute;
-                right: -80px;
+                right: -90px;
                 bottom: 28%;
             }
 
             &::after {
                 content: "MARKETING COMMUNICATION";
-                color: $secondaryColor;
-                font-size: 1.5rem;
+                color: $secondaryTextColor;
+                font-size: 1.5vw;
                 position: absolute;
-                right: -150px;
+                bottom: -40px;
+                left: 60px;
                 font-weight: bold;
-                width: 150px;
             }
         }
 

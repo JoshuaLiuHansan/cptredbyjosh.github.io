@@ -1,7 +1,6 @@
 import Homepage from '../Container/Homepage/Homepage';
 
 import ErrorPage from '../Container/ErrorPage/ErrorPage';
-import { faTemperatureLow } from '@fortawesome/free-solid-svg-icons';
 
 const Routes = () => {
     return [

@@ -40,13 +40,12 @@ class NavigationBar extends Component {
         let distance = null;
 
         if(path !== "") {
-            console.log(document.getElementById(path.replace("#", "")).offsetTop);
-            distance = document.getElementById(path.replace("#", "")).offsetTop;
+            distance = document.getElementById(path.replace("#", "")).offsetTop - 20;
         }
 
         if(distance != null) {
             window.scroll({
-                top: distance,
+                top: distance ? distance : 0,
                 behavior: 'smooth'
             });
         }
