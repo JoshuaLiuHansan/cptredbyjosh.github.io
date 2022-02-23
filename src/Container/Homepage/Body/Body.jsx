@@ -1,10 +1,11 @@
-import React, {Component, createRef, Fragment} from 'react';
+import React, {Component, Fragment} from 'react';
 
 import Header from "../../../Component/Header/Header";
 import Profile from "../../../Component/Profile/Profile";
 import Background from "../../../Component/Background/Background";
 import Collections from '../../../Component/Collections/Collections';
 import Projects from "../../../Component/Projects/Projects";
+import Theme from "../../../Component/Theme/Theme";
 
 // Child Component of Background
 import Experience from "../../../Component/Experience/Experience";
@@ -137,8 +138,7 @@ class Body extends Component {
                     } )
                 }
                 <Collections />
-                {/* <ComingSoon title="Collections"></ComingSoon> */}
-                <ComingSoon title="Theme"></ComingSoon>
+                <Theme metadata={metadata} />
                 <Projects />
             </Fragment>
         );

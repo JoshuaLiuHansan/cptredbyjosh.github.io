@@ -1,7 +1,7 @@
 .projects {
     width: 100%;
+    margin-bottom: 30vh;
     padding: 2rem 4rem;
-    // margin: 75px 0;
 
     h2 {
         font-weight: 800;
@@ -10,7 +10,7 @@
     }
 
     .project-list {
-        margin: 3rem 0;
+        margin: 5rem 0;
 
         .project {
             
@@ -29,13 +29,13 @@
             }
 
             .project-info {
-                text-transform: uppercase;
-
+                
                 h3 {
                     font-weight: bolder;
                     font-size: 30px;
                     width: 70%;
                     min-width: 200px;
+                    text-transform: uppercase;
                 }
 
                 span {

@@ -9,13 +9,10 @@ class Footer extends Component {
         super(props);
         this.state = {
             footerMenu: [
-                {href: "/about-us", label: "Tentang Kami"},
-                {href: "/contact-us", label: "Hubungi Kami"},
-                // {href: "", label: "Lowongan"},
-                // {href: "", label: "Testimoni"},
-                // {href: "", label: "API"},
-                {href: "/terms-and-condition", label: "Syarat dan Ketentuan"},
-                {href: "/privacy-and-policy", label: "Kebijakan dan Privasi"}
+                // {href: "/about-us", label: "Tentang Kami"},
+                // {href: "/contact-us", label: "Hubungi Kami"},
+                // {href: "/terms-and-condition", label: "Syarat dan Ketentuan"},
+                // {href: "/privacy-and-policy", label: "Kebijakan dan Privasi"}
             ],
             footerProfile: [
                 {href: "https://www.instagram.com/mypangan_id/", icon: ['fab', 'instagram']},

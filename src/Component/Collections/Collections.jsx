@@ -12,7 +12,7 @@ class Collections extends Component {
                 "photo14.jpeg",
                 "photo4.jpeg",
                 "photo3.jpeg",
-                "photo2.jpeg",
+                "photo15.jpeg",
                 "photo5.jpeg",
             ]
         }

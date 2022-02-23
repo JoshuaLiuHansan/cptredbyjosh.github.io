@@ -3,6 +3,7 @@ $secondaryTextColor: var(--secondary-text-color);
 
 .collections {
     width: 100%;
+    margin-bottom: 20vh;
     display: grid;
     grid-template-areas: "image1 image2 image2 image3 image3"
                              "image1 image2 image2 image3 image3"

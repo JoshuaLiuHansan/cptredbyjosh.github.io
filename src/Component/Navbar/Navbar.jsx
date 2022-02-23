@@ -25,14 +25,10 @@ class NavigationBar extends Component {
         super(props);
         this.state = {
             brand: {
-                logo: "/assets/logo/logo.jpeg",
-                size: 30
+                logo: "",
+                size: 0
             }
         }
-    }
-
-    componentDidMount() {
-        
     }
 
     getCurrentPath = (path) => {

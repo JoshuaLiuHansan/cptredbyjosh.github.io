@@ -1,0 +1,64 @@
+$secondaryColor: var(--secondary-text-color);
+
+.element-card {
+    width: 25vw;
+    border-radius: 30px;
+    overflow: hidden;
+
+    .element-image {
+        width: 100%;
+        position: relative;
+
+        & > img {
+            width: 100%;
+        }
+
+        .element-explanation {
+            position: absolute;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: baseline;
+
+            padding: 5vh 2rem;
+
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: $secondaryColor;
+            width: 100%;
+            height: 100%;
+
+            .explanation-title {
+                font-weight: bolder;
+                font-size: 2rem;
+                text-transform: uppercase;
+            }
+
+            .explanation-text {
+                text-align: center;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    &-mini {
+        width: 100%;
+        height: auto;
+
+        .element-image {
+            height: 400px;
+
+            .element-explanation {
+                overflow: hidden;
+            }
+
+            & > img {
+                height: 1000px;
+            }
+
+        }
+    }
+
+}
