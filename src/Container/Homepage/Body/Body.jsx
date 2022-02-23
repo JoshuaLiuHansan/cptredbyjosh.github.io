@@ -1,8 +1,9 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component, createRef, Fragment} from 'react';
 
 import Header from "../../../Component/Header/Header";
 import Profile from "../../../Component/Profile/Profile";
 import Background from "../../../Component/Background/Background";
+import Collections from '../../../Component/Collections/Collections';
 import Projects from "../../../Component/Projects/Projects";
 
 // Child Component of Background
@@ -112,23 +113,32 @@ class Body extends Component {
                 }
             ]
         };
+
+        this.metadata = {
+            innerWidth: 0
+        };
     }
 
     render() {
         let backgroundContent = this.state.backgroundContent;
+        this.metadata.innerWidth = window.innerWidth;
+
+        let metadata = this.metadata;
 
         return (
             <Fragment>
-                <Header />
+                <Header metadata={metadata} />
                 <Profile />
                 {
                     backgroundContent.map( (item, index) => {
                         return (
-                            <Background key={index} childComponent={item.childComponent} backgroundContent={item} isReversed={item.isReversed} />
+                            <Background key={index} childComponent={item.childComponent} backgroundContent={item} isReversed={item.isReversed} metadata={metadata}/>
                         );
                     } )
                 }
-                <ComingSoon title="Collections"></ComingSoon>
+                <Collections />
+                {/* <ComingSoon title="Collections"></ComingSoon> */}
+                <ComingSoon title="Theme"></ComingSoon>
                 <Projects />
             </Fragment>
         );

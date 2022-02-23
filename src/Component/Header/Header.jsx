@@ -15,6 +15,8 @@ class Header extends Component {
     render() {
         let state = this.state;
         let FontAwesomeIcon = Init.FontAwesomeIcon;
+        let metadata = this.props.metadata;
+        let isAbsolute = metadata.innerWidth > 1200 ? "absolute" : "";
 
         return (
             <div id="header" className="header">
@@ -25,7 +27,7 @@ class Header extends Component {
                     <h1 className="header-title">
                         Joshua Liu Hansan
                     </h1>
-                    <div className="header-image absolute">
+                    <div className={"header-image " + isAbsolute}>
                         <Image src={state.headerImgPath} fluid />
                     </div>
                     <FontAwesomeIcon icon={['fas', 'camera']} className="header-icon" />

@@ -6,9 +6,7 @@ class Background extends Component {
     constructor(props) {
         super(props);
         this.state = {};
-        this.metadata = {
-            innerWidth: 0
-        }
+        this.metadata = props.metadata
     }
 
     render() {
@@ -19,9 +17,8 @@ class Background extends Component {
         let titleContent = backgroundContent.titleContent;
         let infoContent = backgroundContent.infoContent;
 
-        this.metadata.innerWidth = window.innerWidth;
-
         let metadata = this.metadata;
+        
 
         return (
             <div id={backgroundContent.id} className={ "background" + isReversed}>

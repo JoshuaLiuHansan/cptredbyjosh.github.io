@@ -40,13 +40,14 @@ $backgroundImage: var(--background-image-2);
         }
 
         & .header-image {
-            width: 30vw;
-            min-width: 400px;
+            width: 50vw;
 
             &.absolute {
+                width: 30vw;
                 position: absolute;
                 right: -90px;
                 bottom: 28%;
+                min-width: 400px;
             }
 
             &::after {
