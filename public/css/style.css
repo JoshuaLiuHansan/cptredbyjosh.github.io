@@ -43,4 +43,5 @@
     --footer-list-color: #606266;
   
     overflow-x: hidden;
+    box-sizing: border-box;
   }

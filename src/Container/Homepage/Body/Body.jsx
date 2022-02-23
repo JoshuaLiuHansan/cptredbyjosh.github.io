@@ -1,8 +1,14 @@
 import React, {Component, Fragment} from 'react';
+
 import Header from "../../../Component/Header/Header";
 import Profile from "../../../Component/Profile/Profile";
 import Background from "../../../Component/Background/Background";
 
+// Child Component of Background
+import Experience from "../../../Component/Experience/Experience";
+import Photography from '../../../Component/Photography/Photography';
+
+// Coming Soon Section
 import ComingSoon from '../../../Component/ComingSoon/ComingSoon';
 
 class Body extends Component {
@@ -11,6 +17,7 @@ class Body extends Component {
         this.state = {
             backgroundContent: [
                 {
+                    id: "background",
                     titleContent: {
                         title: "Educational & Organizational Experience"
                     },
@@ -47,6 +54,7 @@ class Body extends Component {
                     }
                 },
                 {
+                    id: "background",
                     titleContent: {
                         title: "Working Experience"
                     },
@@ -76,6 +84,25 @@ class Body extends Component {
                         ]
                     }
                 },
+                {
+                    id: "cptredbyjosh",
+                    titleContent: {
+                        title: "@cptredbyjosh"
+                    },
+                    infoContent: {
+                        imagePath: [
+                            {
+                                fileName: "ig-feeds1-mini.jpeg",
+                                width: 320
+                            },
+                            {
+                                fileName: "ig-feeds2.jpeg",
+                                width: 280
+                            },
+                        ],
+                        description: "CPTREDBYJOSH is a platform that creates memories inspired by emotion and circumstances expressed through photography. CPTREDBYJOSH is built around three fundamental elements: human, panoramas, and time."
+                    }
+                }
             ]
         };
     }
@@ -87,9 +114,10 @@ class Body extends Component {
             <Fragment>
                 <Header />
                 <Profile />
-                <Background backgroundContent={backgroundContent[0]} isReversed={true} />
-                <Background backgroundContent={backgroundContent[1]} isReversed={false} />
-                <ComingSoon title="@cptredbyjosh"></ComingSoon>
+                <Background childComponent={Experience} backgroundContent={backgroundContent[0]} isReversed={true} />
+                <Background childComponent={Experience} backgroundContent={backgroundContent[1]} isReversed={false} />
+                <Background childComponent={Photography} backgroundContent={backgroundContent[2]} isReversed={true} />
+                {/* <ComingSoon title="@cptredbyjosh"></ComingSoon> */}
                 <ComingSoon title="Projects"></ComingSoon>
             </Fragment>
         );

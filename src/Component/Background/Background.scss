@@ -6,7 +6,7 @@ $backgroundImage: var(--background-image-3);
 
 .background {
     max-height: 685px;
-    margin-bottom: 20vh;
+    margin-bottom: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,54 +43,14 @@ $backgroundImage: var(--background-image-3);
     & > &-info {
         display: flex;
         justify-content: center;
+        position: relative;
         
         & > .background-description {
             background-color: $primaryColor;
             color: $secondaryTextColor;
-            width: 93%;
+            width: 91%;
             height: auto;
-            padding: 2.5rem 4rem;
-
-            .background-items {
-                margin: 10px 0;
-
-                .item-title {
-                    font-size: 2vw;
-                    text-transform: uppercase;
-                    font-weight: bolder;
-                    margin-bottom: 20px;
-                    width: 60%;
-                }
-
-                .item-list {
-                    margin-left: 4px;
-                    list-style-type: none;
-
-                    li {
-                        margin-bottom: 30px;
-                    }
-
-                    &-title {
-                        font-size: 1.6vw;
-                    }
-
-                    &-list, &-time-range {
-                        font-size: 1vw;
-                    }
-
-                    &-list {
-                        list-style-type: disc;
-                        margin-top: 10px;
-                        margin-left: 20px;
-
-                        li {
-                            margin-bottom: 7px;
-                            text-align: justify;
-                        }
-                    }
-                }
-            }
-            
+            padding: 2.5rem 4rem;            
         }
     }
 }
