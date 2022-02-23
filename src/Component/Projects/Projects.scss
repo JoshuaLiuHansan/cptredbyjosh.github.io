@@ -1,0 +1,51 @@
+.projects {
+    width: 100%;
+    border: 10px solid black;
+    padding: 2rem 4rem;
+    // margin: 75px 0;
+
+    h2 {
+        font-weight: 800;
+        font-size: 45px;
+        text-transform: uppercase;
+    }
+
+    .project-list {
+        margin: 3rem 0;
+
+        .project {
+            
+            .project-images {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 3rem;
+                margin-bottom: 2rem;
+
+                .project-image {
+                    width: 350px;
+                    border-radius: 25px;
+                }
+            }
+
+            .project-info {
+                text-transform: uppercase;
+
+                h3 {
+                    font-weight: bolder;
+                    font-size: 30px;
+                    width: 70%;
+                    min-width: 200px;
+                }
+
+                span {
+                    word-spacing: 3px;
+                    font-size: 20px;
+                }
+            }
+
+        }
+
+    }
+}

@@ -3,6 +3,7 @@ import React, {Component, Fragment} from 'react';
 import Header from "../../../Component/Header/Header";
 import Profile from "../../../Component/Profile/Profile";
 import Background from "../../../Component/Background/Background";
+import Projects from "../../../Component/Projects/Projects";
 
 // Child Component of Background
 import Experience from "../../../Component/Experience/Experience";
@@ -51,7 +52,9 @@ class Body extends Component {
                                 ]
                             }
                         ]
-                    }
+                    },
+                    isReversed: true,
+                    childComponent: Experience
                 },
                 {
                     id: "background",
@@ -82,7 +85,9 @@ class Body extends Component {
                                 ]
                             }
                         ]
-                    }
+                    },
+                    isReversed: false,
+                    childComponent: Experience
                 },
                 {
                     id: "cptredbyjosh",
@@ -101,7 +106,9 @@ class Body extends Component {
                             },
                         ],
                         description: "CPTREDBYJOSH is a platform that creates memories inspired by emotion and circumstances expressed through photography. CPTREDBYJOSH is built around three fundamental elements: human, panoramas, and time."
-                    }
+                    },
+                    isReversed: true,
+                    childComponent: Photography
                 }
             ]
         };
@@ -114,11 +121,15 @@ class Body extends Component {
             <Fragment>
                 <Header />
                 <Profile />
-                <Background childComponent={Experience} backgroundContent={backgroundContent[0]} isReversed={true} />
-                <Background childComponent={Experience} backgroundContent={backgroundContent[1]} isReversed={false} />
-                <Background childComponent={Photography} backgroundContent={backgroundContent[2]} isReversed={true} />
-                {/* <ComingSoon title="@cptredbyjosh"></ComingSoon> */}
-                <ComingSoon title="Projects"></ComingSoon>
+                {
+                    backgroundContent.map( (item, index) => {
+                        return (
+                            <Background key={index} childComponent={item.childComponent} backgroundContent={item} isReversed={item.isReversed} />
+                        );
+                    } )
+                }
+                <ComingSoon title="Collections"></ComingSoon>
+                <Projects />
             </Fragment>
         );
     }

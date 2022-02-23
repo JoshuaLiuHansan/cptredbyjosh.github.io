@@ -8,7 +8,8 @@ const Photography = (props) => {
     let config = Init.config;
 
     let metadata = props.metadata;
-    let isAbsolute = metadata.innerWidth > 1000 ? "absolute" : "";
+    let isAbsolute = metadata.innerWidth > 1200 ? "absolute" : "";
+    console.log(metadata);
     
     return (
         <div id="cptredbyjosh" className="photography">

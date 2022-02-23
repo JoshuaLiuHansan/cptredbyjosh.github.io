@@ -11,11 +11,6 @@ class Background extends Component {
         }
     }
 
-    componentDidMount() {
-        // console.log(document.getElementsByClassName("photography-feeds"));
-        this.metadata.innerWidth = window.innerWidth;
-    }
-
     render() {
         let isReversed = this.props.isReversed ? " flex-row-reversed" : " flex-row";
         let props = this.props;
@@ -24,6 +19,10 @@ class Background extends Component {
         let titleContent = backgroundContent.titleContent;
         let infoContent = backgroundContent.infoContent;
 
+        this.metadata.innerWidth = window.innerWidth;
+
+        let metadata = this.metadata;
+
         return (
             <div id={backgroundContent.id} className={ "background" + isReversed}>
                 <Col md={3} className="background-title">
@@ -31,7 +30,7 @@ class Background extends Component {
                 </Col>
                 <Col md={9} className="background-info">
                     <Row className="background-description">
-                        <ChildComponent content={infoContent} metadata={this.metadata} />
+                        <ChildComponent content={infoContent} metadata={metadata} />
                     </Row>
                 </Col>
             </div>
