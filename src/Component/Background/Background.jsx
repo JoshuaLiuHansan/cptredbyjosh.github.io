@@ -1,73 +1,62 @@
 import React, {Component} from 'react';
-import Init from "../../Init/Init";
-import {Image} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 import './Background.scss';
 
 class Background extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            sectionContent: [
-                {
-                    title: "Proficiency",
-                    list: [
-                        "Photography",
-                        "Videography",
-                        "Digital Marketing",
-                        "Copywriter",
-                        "Content Creator",
-                        "Kol & SEO Management"
-                    ]
-                },
-                {
-                    title: "Speaking Languages",
-                    list: [
-                        "Indonesia",
-                        "English"
-                    ]
-                }
-            ],
-            backgroundImgPath: [
-                "photo12.jpeg",
-                "photo14.jpeg"
-            ]
-        };
-
-        this.config = Init.config;
+        this.state = {};
     }
 
     render() {
-        let config = this.config;
-        let state = this.state;
+        let isReversed = this.props.isReversed ? " flex-row-reversed" : " flex-row";
+        let props = this.props.backgroundContent;
+        let titleContent = props.titleContent;
+        let infoContent = props.infoContent;
 
         return (
-            <div id="background" className="background">
-                <div className="background-cover">
-                </div>
-                <div className="background-images">
-                    <Image className="background-image" src={config.imageFolder + state.backgroundImgPath[0]} />
-                </div>
-                <div className="background-description">
-                    {
-                        state.sectionContent.map( (item, index) => {
-                            return (
-                                <div className="background-description-section" key={index}>
-                                    <h2 className="background-description-section-title"> {item.title} </h2>
-                                    <ul className='background-description-section-list'>
-                                        {
-                                            item.list.map( (v, k) => {
-                                                return <li key={k}> { v } </li>
-                                            } )
-                                        }
-                                    </ul>
-                                </div>
-                            );
-                        } )
-                    }
-                </div>
-                <div className="background-images">
-                    <Image className="background-image" src={config.imageFolder + state.backgroundImgPath[1]} />
-                </div>
+            <div id="background" className={ "background" + isReversed}>
+                <Col md={3} className="background-title">
+                    <h2> { titleContent.title } </h2>
+                </Col>
+                <Col md={9} className="background-info">
+                    <Row className="background-description">
+                        {
+                            infoContent.exp.map( (item, index) => {
+                                let length = infoContent.exp.length;
+                                let colWidth = Math.floor(12/length);
+
+                                return (
+                                    <Col key={ index } md={colWidth} className="background-items">
+                                        <h3 className="item-title"> {item.title} </h3>
+                                        <ul className='item-list'>
+                                            {
+                                                item.list.map( (value, key) => {
+                                                    return (
+                                                        <li key={key}>
+                                                            <h4 className="item-list-title"> { value.title } </h4>
+                                                            <span className='item-list-time-range'> { value.time } </span>
+                                                            <ul className='item-list-list'>
+                                                                {
+                                                                    value.list.map( (v, k) => {
+                                                                        return (
+                                                                            <li key={k}> { v } </li>
+                                                                        )
+                                                                    } )
+                                                                }
+                                                            </ul>
+                                                        </li>
+                                                    )
+                                                } )
+                                            }
+                                        </ul>
+
+                                    </Col>
+                                )
+                            } )
+                        }
+                    </Row>
+                </Col>
             </div>
         );
     }

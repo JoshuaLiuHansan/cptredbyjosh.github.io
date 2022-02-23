@@ -6,13 +6,89 @@ import Background from "../../../Component/Background/Background";
 import ComingSoon from '../../../Component/ComingSoon/ComingSoon';
 
 class Body extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            backgroundContent: [
+                {
+                    titleContent: {
+                        title: "Educational & Organizational Experience"
+                    },
+                    infoContent: {
+                        exp: [
+                            {
+                                title: "Educational Background",
+                                list: [
+                                    {
+                                        title: "Universitas Bunda Mulia",
+                                        time: "2017 - 2021",
+                                        list: [
+                                            "Graduated with GPA 3.14/4",
+                                            "Bachelor Thesis: Strategi Komunikasi Pemasaran Penjualan Serum Tanaman ARA Indonesia Melalui Media Sosial Instagram; Doing a analytical research about 'how' to communicate brands with customer."
+                                        ] 
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Organizational Experience",
+                                list: [
+                                    {
+                                        title: "Click Photography",
+                                        time: "September 2017 - May 2018",
+                                        list: [
+                                            "Basic Photography",
+                                            "Exposure Triangle",
+                                            "Photography Hunting"
+                                        ] 
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    titleContent: {
+                        title: "Working Experience"
+                    },
+                    infoContent: {
+                        exp: [
+                            {
+                                title: "",
+                                list: [
+                                    {
+                                        title: "Marketing & Social Media Intern at PT INOVASI NATURAL BIO ORGANIK",
+                                        time: "August 2020- November 2020",
+                                        list: [
+                                            "Did series of research towards market trends and demands in agriculture, to be processed of becoming social media content and product.",
+                                            "Managing KOL to always in peak of performance."
+                                        ] 
+                                    },
+                                    {
+                                        title: "Frontliner Team at DEBINDO Expo (Indobuildtech)",
+                                        time: "May 2018",
+                                        list: [
+                                            "Act as first point of contact during the biggest exhibition show of building and construction materials.",
+                                            "Assisting visitor with registration and exhibition areas"
+                                        ] 
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+            ]
+        };
+    }
+
     render() {
+        let backgroundContent = this.state.backgroundContent;
+
         return (
             <Fragment>
                 <Header />
                 <Profile />
-                <Background />
-                {/* <ComingSoon title="Background"></ComingSoon> */}
+                <Background backgroundContent={backgroundContent[0]} isReversed={true} />
+                <Background backgroundContent={backgroundContent[1]} isReversed={false} />
                 <ComingSoon title="@cptredbyjosh"></ComingSoon>
                 <ComingSoon title="Projects"></ComingSoon>
             </Fragment>

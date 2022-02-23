@@ -8,18 +8,21 @@ $secondaryTextColor: var(--secondary-text-color);
     margin-bottom: 20vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 
     & > &-left-side {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 4rem;
 
         & > * {
             font-weight: bolder;
             text-transform: uppercase;
             width: 200px;
+            margin-left: 2rem;
         }
 
         & > h2 {
@@ -32,11 +35,13 @@ $secondaryTextColor: var(--secondary-text-color);
     }
 
     & > &-right-side {
-        
+        display: flex;
+        justify-content: center;
+
         & > .profile-description {
             background-color: $primaryColor;
             color: $secondaryTextColor;
-            width: 90%;
+            width: 93%;
             height: auto;
             padding: 5rem 0.5rem;
 
