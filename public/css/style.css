@@ -9,7 +9,6 @@
     --base-secondary-color: #282440;
     --default-bg-color: #FFF;
     --base-bg-dark: #202022;
-
   
     /* Backgrounds */
     --jumbotron-bg-1: #F2F6FC;
@@ -39,8 +38,8 @@
     --highlight-color: #21D06A;
   
     /* Footer */
-    --footer-background-color: #F2F6FC;
-    --footer-list-color: #606266;
+    --footer-background-color: #FFF;
+    --footer-list-color: var(--base-primary-color);
   
     overflow-x: hidden;
     box-sizing: border-box;

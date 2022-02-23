@@ -1,35 +1,77 @@
 import React, {Component} from 'react';
-// import Init from '../../Init/Init';
+import { Image, Col, Row } from 'react-bootstrap';
+import Init from '../../Init/Init';
 import './Footer.scss';
-
-import ComingSoon from '../ComingSoon/ComingSoon';
 
 class Footer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            footerMenu: [
-                // {href: "/about-us", label: "Tentang Kami"},
-                // {href: "/contact-us", label: "Hubungi Kami"},
-                // {href: "/terms-and-condition", label: "Syarat dan Ketentuan"},
-                // {href: "/privacy-and-policy", label: "Kebijakan dan Privasi"}
-            ],
+            footerImagePath: "self-portrait-no-bg.png",
             footerProfile: [
-                {href: "https://www.instagram.com/mypangan_id/", icon: ['fab', 'instagram']},
-                {href: "https://www.facebook.com/MyPanganID", icon: ['fab', 'facebook-square']},
-                {href: "https://www.linkedin.com/company/mypangan/", icon: ['fab', 'linkedin']}
+                {
+                    account: [
+                        {href: "https://www.instagram.com/cptredbyjosh/", name: "@cptredbyjosh"},
+                        {href: "https://www.instagram.com/joshliu1/", name: "@joshliu1"}
+                    ],
+                    icon: ['fab', 'instagram'],
+                    title: "Instagram"
+                },
+                {
+                    account: [
+                        {href: "https://www.linkedin.com/in/joshua-liu-hansan-712030196/", name: "Joshua Liu Hansan"}
+                    ],
+                    icon: ['fab', 'linkedin'],
+                    title: "LinkedIn"
+                },
             ]
-        }
+        };
+
+        this.config = Init.config;
     }
 
     render() {
+        let state = this.state;
+        let config = this.config;
+        let FontAwesomeIcon = Init.FontAwesomeIcon;
+
         return (
-            <footer className={
-                // "px-5 py-3" 
-                // + 
+            <footer id="contact" className={
+                "contact" 
+                + 
                 (this.props.show ? '' : ' d-none')
             }>
-                <ComingSoon title="Contacts"></ComingSoon>
+                <div id="contact-image-container" className="grid-item">
+                    <Image src={config.imageFolder + state.footerImagePath} className="contact-image" width={500} />
+                </div>
+                <div id="contact-title" className="grid-item">
+                    <h2>
+                        Contact
+                    </h2>
+                </div>
+                <Row id="contact-info" className="grid-item">
+                    {
+                        state.footerProfile.map( (item, index) => {
+                            return (
+                                <Col key={index} className="social-media" lg={6}>
+                                    <h3> 
+                                        <FontAwesomeIcon icon={ item.icon } className="social-media-icon" />
+                                        { item.title } 
+                                    </h3>
+                                    {
+                                        item.account.map( (v, k) => {
+                                            return (
+                                                <a key={k} href={v.href} className='social-media-account'>
+                                                    { v.name }
+                                                </a>
+                                            )
+                                        } )
+                                    }
+                                </Col>
+                            );
+                        } )
+                    }
+                </Row>
             </footer>
         );
     }

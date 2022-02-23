@@ -12,7 +12,7 @@ import Experience from "../../../Component/Experience/Experience";
 import Photography from '../../../Component/Photography/Photography';
 
 // Coming Soon Section
-import ComingSoon from '../../../Component/ComingSoon/ComingSoon';
+// import ComingSoon from '../../../Component/ComingSoon/ComingSoon';
 
 class Body extends Component {
     constructor(props) {

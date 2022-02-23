@@ -1,113 +1,92 @@
-footer {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    background-color: var(--footer-background-color);
+$footerBackgroundColor: var(--footer-list-color);
+$footerTitleColor: var(--footer-background-color);
 
-    #first-column {
-        width: 50%;
+$primaryTextColor: var(--primary-text-color);
+$secondaryTextColor: var(--secondary-text-color);
 
-        p {
-            width: 70%;
-            font-weight: 700;
+.contact {
+    width: 100%;
+    background-color: $footerBackgroundColor;
+    display: grid;
+    grid-template-areas: "contact-image contact-title contact-title contact-title"
+                         "contact-image contact-info contact-info contact-info";
+    grid-gap: 0;
+
+    #contact-image-container {
+        grid-area: contact-image;
+        display: flex;
+        justify-content: center;
+
+        img.contact-image {
+            min-width: 378px;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
         }
     }
-    #second-column {width: 50%}
-    
-    h5 {
-        // font-weight: 700;
-        font-size: 1rem;
-    }
 
-    .footer-grid {
+    #contact-title {
+        grid-area: contact-title;
         width: 100%;
-        display: grid;
-        grid-template-areas: "action contact"
-                             "action address";
-        grid-column-gap: 60px;
-
-        .footer-grid-item {
-            &#action {
-                grid-area: action;
-            }
-
-            &#contact {
-                grid-area: contact;
-
-                .contact-info {
-                    display: flex;
-                    align-items: center;
-                    gap: 5px;
-                }
-            }
-
-            &#address {
-                grid-area: address;
-
-                .address-info {
-                    font-weight: 400;
-                    color: var(--footer-list-color);
-                }
-            }
-
-            ul {
-                li {
-                    list-style: none;
-                    font-weight: 400;
-                    color: var(--footer-list-color);
-    
-                    a {
-                        text-decoration: none;
-                        color: var(--footer-list-color);
-    
-                        &:hover {
-                            color: var(--footer-list-color);
-                            opacity: 0.6;
-                        }
-                    }
-                }
-            }
+        background-color: $footerTitleColor;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 3rem;
+        text-transform: uppercase;
+        
+        h2 {
+            font-size: 4rem;
+            font-weight: bolder;
         }
     }
 
-    .flex-item {
+    #contact-info {
+        grid-area: contact-info;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        .social-media {
+            padding: 5rem;
+
+            h3, a {
+                color: $secondaryTextColor;
+            }
+
+            h3 {
+                font-weight: bolder;
+                font-size: 1.7rem;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+            }
+
+            a {
+                cursor: pointer;
+                text-decoration: none;
+                display: block;
+                margin: 4px 0 7px;
+                font-size: 1.1rem;
+            }
+
+            &-icon {
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .contact {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        
-        p {
-            line-height: 30px;
+
+        #contact-image-container {
+            display: none;
         }
-
-        .footer-icon-list {
-            display: flex;
-            padding-top: 0.75rem;
-
-            .footer-icon {
-                font-size: 2.3rem;
-                margin-right: 30px;
-                color: var(--primary-text-color);
-            }
-        }
-    }
-
-    @media (max-width: 992px) {
-        flex-direction: column;
-
-        #first-column {
+    
+        #contact-info {
             width: 100%;
-
-            p {
-                width: 100%;
-            }
-        }
-
-        #second-column {width: 100%}
-
-        .footer-grid {
-            grid-template-areas: "action action"
-                                 "contact contact"
-                                 "address address";
         }
     }
 }
