@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.d8c3511d.chunk.css",
-    "main.js": "/static/js/main.1fa89a37.chunk.js",
-    "main.js.map": "/static/js/main.1fa89a37.chunk.js.map",
+    "main.css": "/static/css/main.04855fed.chunk.css",
+    "main.js": "/static/js/main.6213b93a.chunk.js",
+    "main.js.map": "/static/js/main.6213b93a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c45a3337.js",
     "runtime-main.js.map": "/static/js/runtime-main.c45a3337.js.map",
     "static/css/2.d6008dad.chunk.css": "/static/css/2.d6008dad.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.b1c503fb.chunk.js.map": "/static/js/3.b1c503fb.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.d6008dad.chunk.css.map": "/static/css/2.d6008dad.chunk.css.map",
-    "static/css/main.d8c3511d.chunk.css.map": "/static/css/main.d8c3511d.chunk.css.map",
+    "static/css/main.04855fed.chunk.css.map": "/static/css/main.04855fed.chunk.css.map",
     "static/js/2.6465e8ba.chunk.js.LICENSE.txt": "/static/js/2.6465e8ba.chunk.js.LICENSE.txt",
     "static/media/App.css": "/static/media/Mulish-VariableFont_wght.894f3c22.ttf"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.c45a3337.js",
     "static/css/2.d6008dad.chunk.css",
     "static/js/2.6465e8ba.chunk.js",
-    "static/css/main.d8c3511d.chunk.css",
-    "static/js/main.1fa89a37.chunk.js"
+    "static/css/main.04855fed.chunk.css",
+    "static/js/main.6213b93a.chunk.js"
   ]
 }
