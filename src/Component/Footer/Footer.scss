@@ -43,6 +43,8 @@ $secondaryTextColor: var(--secondary-text-color);
 
     #contact-info {
         grid-area: contact-info;
+        margin-left: 0;
+        margin-right: 0;
 
         display: flex;
         flex-wrap: wrap;

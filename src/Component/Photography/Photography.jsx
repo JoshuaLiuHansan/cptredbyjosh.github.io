@@ -9,7 +9,6 @@ const Photography = (props) => {
 
     let metadata = props.metadata;
     let isAbsolute = metadata.innerWidth > 1200 ? "absolute" : "";
-    console.log(metadata);
     
     return (
         <div id="cptredbyjosh" className="photography">

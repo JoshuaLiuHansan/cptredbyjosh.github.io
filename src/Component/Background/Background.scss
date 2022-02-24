@@ -15,7 +15,6 @@ $backgroundImage: var(--background-image-3);
     & > &-title {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         justify-content: center;
         gap: 4rem;
         // background-image: $backgroundImage;

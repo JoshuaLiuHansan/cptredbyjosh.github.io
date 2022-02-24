@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Image } from 'react-bootstrap';
+import { Image, Col } from 'react-bootstrap';
 import Init from '../../Init/Init';
 import './Projects.scss';
 
@@ -34,7 +34,7 @@ class Projects extends Component {
                     {
                         state.projects.map( (project, key) => {
                             return (
-                                <div key={key} className="project">
+                                <Col key={key} className="project">
                                     <div className="project-images">
                                         {
                                             project.imagePath.map( (item, index) => {
@@ -48,7 +48,7 @@ class Projects extends Component {
                                         <h3> { project.title } </h3>
                                         <span> {project.subtitle} </span>
                                     </div>
-                                </div>
+                                </Col>
 
                             );
                         } )

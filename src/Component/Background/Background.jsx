@@ -10,7 +10,7 @@ class Background extends Component {
     }
 
     render() {
-        let isReversed = this.props.isReversed ? " flex-row-reversed" : " flex-row";
+        let isReversed = this.props.isReversed;
         let props = this.props;
         let ChildComponent = props.childComponent;
         let backgroundContent = props.backgroundContent;
@@ -18,14 +18,15 @@ class Background extends Component {
         let infoContent = backgroundContent.infoContent;
 
         let metadata = this.metadata;
+        let innerWidth = metadata.innerWidth;
         
 
         return (
-            <div id={backgroundContent.id} className={ "background" + isReversed}>
-                <Col md={3} className="background-title">
+            <div id={backgroundContent.id} className={ "background" + (isReversed ? " flex-row-reversed" : " flex-row")}>
+                <Col md={4} className={"background-title" + (isReversed || metadata.innerWidth < 768 ? "" : " align-items-center")}>
                     <h2> { titleContent.title } </h2>
                 </Col>
-                <Col md={9} className="background-info">
+                <Col md={8} className="background-info">
                     <Row className="background-description">
                         <ChildComponent content={infoContent} metadata={metadata} />
                     </Row>
