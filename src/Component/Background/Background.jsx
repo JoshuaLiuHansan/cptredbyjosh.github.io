@@ -23,7 +23,7 @@ class Background extends Component {
 
         return (
             <div id={backgroundContent.id} className={ "background" + (isReversed ? " flex-row-reversed" : " flex-row")}>
-                <Col md={4} className={"background-title" + (isReversed || metadata.innerWidth < 768 ? "" : " align-items-center")}>
+                <Col md={4} className={"background-title" + (isReversed || innerWidth < 768 ? "" : " align-items-center")}>
                     <h2> { titleContent.title } </h2>
                 </Col>
                 <Col md={8} className="background-info">

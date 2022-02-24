@@ -67,10 +67,16 @@ $backgroundImage: var(--background-image-1);
                     text-transform: uppercase;
                     letter-spacing: 2px;
                     font-weight: 200;
-                    font-size: 1.5vw;
+                    font-size: 1.5rem;
                     margin-bottom: 1rem;
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile-detail {
+        flex-wrap: wrap;
     }
 }

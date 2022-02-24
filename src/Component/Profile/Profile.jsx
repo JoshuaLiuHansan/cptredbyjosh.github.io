@@ -50,7 +50,9 @@ class Profile extends Component {
                                 <Image src={config.imageFolder + rightContent.profileImgPath[1]} />
                             </div>
                             <div id="third" className="profile-text">
-                                { rightContent.description }
+                                <span>
+                                    { rightContent.description }
+                                </span>
                             </div>
                         </div>
                     </Col>
