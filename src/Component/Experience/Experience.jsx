@@ -10,7 +10,7 @@ const Experience = (props) => {
         let colWidth = Math.floor(12/length);
 
         return (
-            <Col key={ index } md={colWidth} className="experience-items">
+            <Col key={ index } lg={colWidth} className="experience-items">
                 <h3 className="item-title"> {item.title} </h3>
                 <ul className='item-list'>
                     {

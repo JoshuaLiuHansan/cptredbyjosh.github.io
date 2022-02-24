@@ -34,9 +34,14 @@ class NavigationBar extends Component {
     getCurrentPath = (path) => {
         let state = this.state;
         let distance = null;
+        let offsetDiff = window.innerWidth > 1000 ? 60 : 230;
 
         if(path !== "") {
-            distance = document.getElementById(path.replace("#", "")).offsetTop - 20;
+            if(path === "#cptredbyjosh") {
+                offsetDiff += window.innerWidth > 590 ? 60 : -120;
+            }
+
+            distance = document.getElementById(path.replace("#", "")).offsetTop - offsetDiff;
         }
 
         if(distance != null) {
@@ -44,6 +49,11 @@ class NavigationBar extends Component {
                 top: distance ? distance : 0,
                 behavior: 'smooth'
             });
+
+            let navbarToggler = document.getElementsByClassName("navbar-toggler")[0];
+            if(! navbarToggler.classList.contains("collapsed")) {
+                navbarToggler.click();
+            }
         }
 
         this.setState(state);

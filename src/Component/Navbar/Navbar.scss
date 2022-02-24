@@ -9,6 +9,8 @@ $transparentTextColor: var(--transparent-text-color);
         transition: 0.6s;
         font-weight: 700;
         z-index: 3;
+        position: sticky;
+        top: 0;
 
         &.bg-custom {
             background-color: $secondaryColor;
