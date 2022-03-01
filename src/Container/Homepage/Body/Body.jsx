@@ -112,7 +112,8 @@ class Body extends Component {
                     isReversed: true,
                     childComponent: Photography
                 }
-            ]
+            ],
+            screenWidth: window.innerWidth
         };
 
         this.metadata = {
@@ -120,9 +121,19 @@ class Body extends Component {
         };
     }
 
+    componentDidMount() {
+        let state = this;
+        
+        window.addEventListener('resize', function(event){
+            state.screenWidth = this.innerWidth;
+
+            state.setState(state);
+        });
+    }
+
     render() {
         let backgroundContent = this.state.backgroundContent;
-        this.metadata.innerWidth = window.innerWidth;
+        this.metadata.innerWidth = this.state.screenWidth;
 
         let metadata = this.metadata;
 
