@@ -12,8 +12,8 @@ class ProfileDetail extends Component {
                     title: "Proficiency",
                     list: [
                         "Photography",
-                        "Videography",
-                        "Digital Marketing",
+                        // "Videography",
+                        // "Digital Marketing",
                         "Copywriter",
                         "Content Creator",
                         "Kol & SEO Management"

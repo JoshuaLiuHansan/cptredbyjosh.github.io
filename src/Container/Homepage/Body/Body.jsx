@@ -144,7 +144,13 @@ class Body extends Component {
                 {
                     backgroundContent.map( (item, index) => {
                         return (
-                            <Background key={index} childComponent={item.childComponent} backgroundContent={item} isReversed={item.isReversed} metadata={metadata}/>
+                            <Background 
+                                key={index} 
+                                childComponent={item.childComponent}
+                                backgroundContent={item} 
+                                isReversed={item.isReversed} 
+                                metadata={metadata}
+                            />
                         );
                     } )
                 }
